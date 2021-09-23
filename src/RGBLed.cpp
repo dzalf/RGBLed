@@ -106,12 +106,20 @@ void RGBLed::fadeOut(int red, int green, int blue, int steps, int duration) {
 	fade(red, green, blue, steps, duration, true);
 }
 
+void RGBLed::fadeOut(int rgb[3], int steps, int duration, int brightness) {
+	fade(rgb[0], rgb[1], rgb[2], steps, duration, brightness, false);
+}
+
 void RGBLed::fadeIn(int rgb[3], int steps, int duration) {
 	fade(rgb[0], rgb[1], rgb[2], steps, duration, false);
 }
 
 void RGBLed::fadeIn(int red, int green, int blue, int steps, int duration) {
 	fade(red, green, blue, steps, duration, false);
+}
+
+void RGBLed::fadeIn(int rgb[3], int steps, int duration, int brightness) {
+	fade(rgb[0], rgb[1], rgb[2], steps, duration, brightness, false);
 }
 
 void RGBLed::fade(int red, int green, int blue, int steps, int duration, bool out) {

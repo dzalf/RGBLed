@@ -24,9 +24,11 @@ class RGBLed {
 
 		void fadeOut(int rgb[3], int steps, int duration);
 		void fadeOut(int red, int green, int blue, int steps, int duration);
+		void fadeOut(int rgb[3], int steps, int duration, int brightness);		// added dzalf on Sept 2021
 
 		void fadeIn(int rgb[3], int steps, int duration);
 		void fadeIn(int red, int green, int blue, int steps, int duration);
+		void fadeIn(int rgb[3], int steps, int duration, int brightness);		// added dzalf on Sept 2021
 
 		static int RED[3];
 		static int GREEN[3];
